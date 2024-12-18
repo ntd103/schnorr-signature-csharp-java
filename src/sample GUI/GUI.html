@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HCI-Based Form Design</title>
+    <title>Schnorr Signature Scheme Demo</title>
     <script
-      type="text/javascript"
       async
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
     ></script>
@@ -20,10 +19,9 @@
         background-color: #f4f4f9;
         color: #333;
         display: flex;
-        height: 100vh;
-        overflow: hidden;
+        overflow: auto;
       }
-      .container {
+      main {
         display: flex;
         width: 100%;
         height: 100%;
@@ -37,7 +35,6 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
       }
       .panel h2 {
         margin-bottom: 10px;
@@ -70,7 +67,7 @@
         color: red;
         font-size: 12px;
         height: 15px;
-        margin-bottom: 10px; /* Added space for error messages */
+        margin-bottom: 10px;
       }
       hr {
         margin: 10px 0;
@@ -91,95 +88,106 @@
     </style>
   </head>
   <body>
-    <div class="container">
+    <main>
       <!-- Panel 1: Tạo khóa -->
-      <div class="panel">
+      <form class="panel">
         <h2>Tạo khóa</h2>
         <div class="input-section">
           <label for="p">Chọn số nguyên tố \(p\):</label>
-          <input type="text" id="p" />
+          <input type="text" id="p" name="p" />
           <div class="error-msg">p không phải số nguyên tố</div>
-          <button>Gen</button>
+          <button type="button">Gen</button>
 
           <label for="q">Chọn số nguyên tố \(q\) là ước của \(p - 1\):</label>
-          <input type="text" id="q" />
+          <input type="text" id="q" name="q" />
           <div class="error-msg">q không phải ước p</div>
-          <button>Gen</button>
+          <button type="button">Gen</button>
 
-          <label for="b">Chọn \(b\in Z^*_p\) </label>
-          <input type="text" id="b" />
+          <label for="b">Chọn \(b\in Z^*_p\):</label>
+          <input type="text" id="b" name="b" />
           <div class="error-msg">b không hợp lệ</div>
-          <button>Gen</button>
+          <button type="button">Gen</button>
 
-          <label for="a">Chọn \(a \in Z_q\) </label>
-          <input type="text" id="a" />
+          <label for="a">Chọn \(a \in Z_q\):</label>
+          <input type="text" id="a" name="a" />
           <div class="error-msg">a không hợp lệ</div>
-          <button>Gen</button>
+          <button type="button">Gen</button>
         </div>
         <hr />
-        <button class="action-btn">TẠO</button>
-        <label>Giá trị \(g = b^{\frac{p - 1}{q}}\mod{p}\) và \(g\neq 1\)</label>
+        <button type="submit" class="action-btn">TẠO</button>
+        <label
+          >Giá trị \(g = b^{\frac{p - 1}{q}}\mod{p}\) và \(g\neq 1\):</label
+        >
         <input type="text" readonly />
-        <div class="error-msg">g không phải căn nguyên thủy của nhóm cyclic cấp q</div>
+        <div class="error-msg">
+          g không phải căn nguyên thủy của nhóm cyclic cấp q
+        </div>
 
-        <label>Giá trị \(y = g^a\mod{p}\)</label>
+        <label>Giá trị \(y = g^a\mod{p}\):</label>
         <input type="text" readonly />
 
         <label>Khóa công khai: \( (p, q, g, y) \)</label>
         <input type="text" readonly />
-        <div class="error-msg"></div>
-      </div>
+      </form>
 
       <!-- Panel 2: Tạo chữ ký -->
-      <div class="panel">
+      <form class="panel">
         <h2>Tạo chữ ký</h2>
         <div class="input-section">
           <label for="message">Thông điệp \(m\):</label>
-          <input type="file" id="message" />
-          <button>Upload</button>
-          <textarea placeholder="Nhập thông điệp"></textarea>
+          <input type="file" id="message" name="message" />
+          <button type="button">Upload</button>
+          <textarea
+            id="message-text"
+            name="message-text"
+            placeholder="Nhập thông điệp"
+          ></textarea>
           <div class="error-msg"></div>
 
           <label for="k">Chọn \(k \in Z_q\):</label>
-          <input type="text" id="k" />
+          <input type="text" id="k" name="k" />
           <div class="error-msg">k không hợp lệ</div>
-          <button>Gen</button>
+          <button type="button">Gen</button>
         </div>
         <hr />
-        <button class="action-btn">TẠO</button>
-        <label>Giá trị của \(s = ae + k\mod{q}\)</label>
+        <button type="submit" class="action-btn">TẠO</button>
+        <label>Giá trị của \(s = ae + k\mod{q}\):</label>
         <input type="text" readonly />
 
-        <label>Giá trị của \(e = h(m||g^k\mod{p}) \)</label>
+        <label>Giá trị của \(e = h(m||g^k\mod{p})\):</label>
         <input type="text" readonly />
 
         <label>Chữ ký: \( (s, e) \)</label>
         <input type="text" readonly />
-      </div>
+      </form>
 
       <!-- Panel 3: Xác minh chữ ký -->
-      <div class="panel">
+      <form class="panel">
         <h2>Xác minh chữ ký</h2>
         <div class="input-section">
-          <label for="message-verify">Thông điệp m:</label>
-          <input type="file" id="message-verify" />
-          <button>Upload</button>
-          <textarea placeholder="Nhập thông điệp"></textarea>
+          <label for="message-verify">Thông điệp \(m\):</label>
+          <input type="file" id="message-verify" name="message-verify" />
+          <button type="button">Upload</button>
+          <textarea
+            id="message-verify-text"
+            name="message-verify-text"
+            placeholder="Nhập thông điệp"
+          ></textarea>
           <div class="error-msg"></div>
 
-          <label for="signature">Nhập chữ ký:</label>
-          <input type="text" id="signature" />
-          <div class="error-msg">chữ ký không hợp lệ</div>
+          <label for="signature">Nhập chữ ký \( (s, e) \)</label>
+          <input type="text" id="signature" name="signature" />
+          <div class="error-msg">Chữ ký không hợp lệ</div>
 
-          <label for="public-key">Nhập khóa công khai:</label>
-          <input type="text" id="public-key" />
+          <label for="public-key">Nhập khóa công khai \( (p, q, g, y) \)</label>
+          <input type="text" id="public-key" name="public-key" />
           <div class="error-msg">Khóa không hợp lệ</div>
         </div>
         <hr />
-        <button class="action-btn">XÁC MINH</button>
+        <button type="submit" class="action-btn">XÁC MINH</button>
         <label>Kết quả xác minh:</label>
         <input type="text" readonly placeholder="Hợp lệ hoặc Không hợp lệ" />
-      </div>
-    </div>
+      </form>
+    </main>
   </body>
 </html>
