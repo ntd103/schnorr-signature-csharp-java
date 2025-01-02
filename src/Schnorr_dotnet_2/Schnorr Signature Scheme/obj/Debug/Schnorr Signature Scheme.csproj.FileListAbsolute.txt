@@ -1,0 +1,45 @@
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\obj\Debug\Schnorr Signature Scheme.csproj.AssemblyReference.cache
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\obj\Debug\Schnorr_Signature_Scheme.MainForm.resources
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\obj\Debug\Schnorr_Signature_Scheme.Properties.Resources.resources
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\obj\Debug\Schnorr Signature Scheme.csproj.GenerateResource.cache
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\obj\Debug\Schnorr Signature Scheme.csproj.CoreCompileInputs.cache
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\Schnorr Signature Scheme.exe.config
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\Schnorr Signature Scheme.exe
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\Schnorr Signature Scheme.pdb
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\obj\Debug\Schnorr Signature Scheme.exe
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\obj\Debug\Schnorr Signature Scheme.pdb
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\itextsharp.dll
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\Newtonsoft.Json.dll
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\System.Buffers.dll
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\System.Memory.dll
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\System.ValueTuple.dll
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\itextsharp.xml
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\Newtonsoft.Json.xml
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\System.Buffers.xml
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\System.Memory.xml
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\bin\Debug\System.ValueTuple.xml
+C:\Users\sudoman\source\repos\Schnorr Signature Scheme\Schnorr Signature Scheme\obj\Debug\Schnorr .E657AEE4.Up2Date

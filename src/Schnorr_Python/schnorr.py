@@ -118,10 +118,14 @@ def hash_function(message):
 # -----------------------------
 # Sinh chữ ký Schnorr
 # -----------------------------
-def generate_signature(private_key, public_key, m):
+def generate_signature(private_key, public_key, m, k=None):
     p, q, g, y, b = public_key
     a = private_key
-    k = random_number_in_Zq(q)
+    if k is None:
+        # Sinh tự động k
+        k = random_number_in_Zq(q)
+    # else:
+        # Sử dụng k nhập vào
     r = mod_exp(g, k, p)
     e = hash_function(m + str(r)) % q
     s = (a * e + k) % q
@@ -160,8 +164,15 @@ if __name__ == "__main__":
 
     msg = input("\nNhập thông điệp cần ký: ")
 
+    if choice == 'y':
+        # Chế độ tự động: cho phép nhập k
+        k = int(input("Nhập giá trị k: "))
+        # Sinh tự động k đã được thay thế bằng nhập giá trị k
+    else:
+        k = None  # Sinh tự động k
+
     # Tạo chữ ký
-    s, e, k, r = generate_signature(private_key, public_key, msg)
+    s, e, k_used, r = generate_signature(private_key, public_key, msg, k)
 
     # Hiển thị các tham số
     print("\n[+] Thông điệp:", msg)
@@ -171,13 +182,13 @@ if __name__ == "__main__":
     print("[+] g:", public_key[2], "   # b^((p - 1)/q) mod p")
     print("[+] a (khóa bí mật):", private_key)
     print("[+] y:", public_key[3], "   # g^a mod p")
-    print("[+] k (ngẫu nhiên):", k)
+    print("[+] k (ngẫu nhiên):", k_used)
     print("[+] r:", r, "   # g^k mod p")
     print("[+] e:", e, "   # H(m || r) mod q")
     print("[+] s:", s, "   # (a*e + k) mod q")
 
     # Kiểm tra chữ ký
-    valid, v, e_prime = verify_signature(public_key, (s, e, k, r), msg)
+    valid, v, e_prime = verify_signature(public_key, (s, e, k_used, r), msg)
     print("\n[+] v =", v, "  # (g^s * y^(-e)) mod p")
     print("[+] e' =", e_prime, " # H(m || v) mod q")
 
