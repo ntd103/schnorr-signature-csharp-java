@@ -908,12 +908,15 @@ namespace Schnorr_Signature_Scheme
                     if (txtVerifyMessageM.Text != txtSignMessageM.Text)
                     {
                         txtVerifyResult.Text += " | Lỗi: Thông điệp đã bị thay đổi";
-                    }
-                    if (txtVerifyS.Text != txtSignS.Text || txtVerifyE.Text != txtSignE.Text)
+                    } 
+                    else if (txtVerifyS.Text != txtSignS.Text || txtVerifyE.Text != txtSignE.Text)
                     {
                         txtVerifyResult.Text += " | Lỗi: Chữ ký đã bị thay đổi";
                     }
-                    txtVerifyResult.Text += " | Kiểm tra lại khóa công khai";
+                    else 
+                    {
+                        txtVerifyResult.Text += " | Kiểm tra lại khóa công khai";
+                    }
                 }
             }
             catch (Exception ex)
