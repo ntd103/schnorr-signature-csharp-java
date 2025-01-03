@@ -15,6 +15,10 @@ using iTextSharp.text.pdf.parser;
 using Microsoft.Office.Interop.Word;
 using System.Runtime.InteropServices;
 
+// Hướng phát triển
+// Tạo thêm hàm tiện ích và xử lý tập tin để tái sử dụng, giảm file size
+// Bỏ chức năng nhập khóa công khai khi xác minh chữ ký (Thừa)
+
 namespace Schnorr_Signature_Scheme
 {
     public partial class MainForm : Form
@@ -900,22 +904,22 @@ namespace Schnorr_Signature_Scheme
                 }
 
                 bool result = VerifySignature();
-                txtVerifyResult.Text = result ? "Chữ ký hợp lệ" : "Chữ ký không hợp lệ";
+                txtVerifyResult.Text = result ? "Chữ ký hợp lệ" : "";
 
                 if (!result)
                 {
                     // Kiểm tra các lỗi xác thực cụ thể
                     if (txtVerifyMessageM.Text != txtSignMessageM.Text)
                     {
-                        txtVerifyResult.Text += " | Lỗi: Thông điệp đã bị thay đổi";
+                        txtVerifyResult.Text += "Lỗi: Thông điệp đã bị thay đổi";
                     } 
                     else if (txtVerifyS.Text != txtSignS.Text || txtVerifyE.Text != txtSignE.Text)
                     {
-                        txtVerifyResult.Text += " | Lỗi: Chữ ký đã bị thay đổi";
+                        txtVerifyResult.Text += "Lỗi: Chữ ký đã bị thay đổi";
                     }
                     else 
                     {
-                        txtVerifyResult.Text += " | Kiểm tra lại khóa công khai";
+                        txtVerifyResult.Text += "Kiểm tra lại khóa công khai";
                     }
                 }
             }
